@@ -8,45 +8,136 @@
 </head>    
 <body>
 <!------Header---------->
-<header>
-    <h1>Contact us</h1>
-  <nav>
-    <ul>
-        <li>home</li>
-        <li>about</li>
-        <li>Contact</li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
 
-<!------Team---------->
-<section>
-  <h2>Our team</h2>
-  <table>
-  <thead>
-    <tr>
-      <th>jenga Klugman</th>
-      <th>James muddle</th>
-    <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="https://www.echo.net.au/wp-content/uploads/2018/09/Chincogan-Charge-10-12years-boys-180x180.jpg" alt=""></td>
-       <td><img src="https://www.echo.net.au/wp-content/uploads/2019/09/EurekaPS-640x443.jpg" alt=""></td>
-    </tr>
-</section>
+    .centered-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    nav li {
+      text-transform: capitalize;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .team-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    th {
+      padding-bottom: 10px;
+      font-size: 18px;
+    }
+
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="centered-container">
+    <header>
+      <h1>Contact us</h1>
+      <nav>
+        <ul>
+          <li>home</li>
+          <li>about</li>
+          <li>contact</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Our team</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jenga Klugman</th>
+            <th>James Muddle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://www.echo.net.au/wp-content/uploads/2018/09/Chincogan-Charge-10-12years-boys-180x180.jpg" alt="" class="team-photo"></td>
+            <td><img src="https://www.echo.net.au/wp-content/uploads/2019/09/EurekaPS-640x443.jpg" alt="" class="team-photo"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+</body>
  
-<h2>Contact form</h2>
-<form action="/submit" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" required></textarea>
-  <input type="submit" value="Send">
+ 
+ 
+<style>
+  .contact-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<h2 class="contact-heading">Contact Form</h2>
+
+
+
+      <form action="/submit" method="POST" style="max-width: 400px; margin: 0 auto 60px auto; font-family: Arial, sans-serif;">
+  <label for="name" style="display: block; margin-bottom: 6px;">Name:</label>
+  <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;">
+
+  <label for="email" style="display: block; margin-bottom: 6px;">Email:</label>
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;">
+
+  <label for="message" style="display: block; margin-bottom: 6px;">Message:</label>
+  <textarea id="message" name="message" required style="width: 100%; padding: 8px; height: 120px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+  <input type="submit" value="Send" style="background-color: #007BFF; color: white; padding: 10px 16px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">
 </form>
 
+<form action="/submit" method="POST" style="max-width: 400px; margin: 0 auto; font-family: Arial, sans-serif;">
+  <label for="contact" style="display: block; margin-bottom: 6px;">Who would you like to contact?</label>
+  <select id="contact" name="contact" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    <option value="">-- Please choose --</option>
+    <option value="jenga">Jenga Klugman</option>
+    <option value="james">James Muddle</option>
+  </select>
+</form>
+
+</body>
+</html>
 
 </html>
